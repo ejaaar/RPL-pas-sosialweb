@@ -4,13 +4,12 @@ import { ThemeContext } from '../context/ThemeContext';
 import '../styles/searchbar.css';
 
 function SearchBar() {
-  const { users } = useContext(SocialContext); // Mengambil daftar seluruh akun
-  const { viewProfile } = useContext(ThemeContext); // Mengambil fungsi navigasi ke profil
+  const { users } = useContext(SocialContext);
+  const { viewProfile } = useContext(ThemeContext);
   
   const [isOpen, setIsOpen] = useState(false);
   const searchContainerRef = useRef(null);
 
-  // Menutup dropdown daftar akun jika pengguna mengklik di luar area searchbar
   useEffect(() => {
     function handleClickOutside(event) {
       if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
