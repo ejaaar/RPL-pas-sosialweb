@@ -1,0 +1,56 @@
+/* Menghapus margin bawaan browser agar layout full-width */
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Wrapper utama untuk menengahkan seluruh kontainer layout */
+.app-main-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Kontainer tata letak 3 kolom di App.jsx */
+.app-layout-container {
+  display: flex;
+  width: 100%;
+  max-width: 1250px; /* Gabungan lebar Left(275) + Middle(600) + Right(350) + padding */
+  box-sizing: border-box;
+}
+
+/* Kolom Kiri (Navbar) - DIKUNCI AGAR TIDAK IKUT SCROLL */
+.layout-left-sidebar {
+  width: 275px;
+  flex-shrink: 0;
+  border-right: 1px solid #eff3f4;
+  padding-right: 1rem;
+  
+  /* Logika pengunci posisi */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* Kolom Tengah (UserCard/Linimasa) - TETAP BISA DI-SCROLL */
+.layout-middle-content {
+  width: 600px;
+  flex-shrink: 0;
+  border-right: 1px solid #eff3f4;
+  min-height: 100vh;
+}
+
+/* Kolom Kanan (SearchBar) - DIKUNCI AGAR TIDAK IKUT SCROLL */
+.layout-right-sidebar {
+  width: 350px;
+  flex-shrink: 0;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+  
+  /* Logika pengunci posisi */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}

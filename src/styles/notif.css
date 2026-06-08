@@ -1,0 +1,81 @@
+.notifications-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.notifications-header {
+  padding: 0.75rem 1rem;
+}
+
+.notifications-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f1419;
+}
+
+.notifications-tabs {
+  display: flex;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.tab-btn:hover {
+  background-color: rgba(15, 20, 25, 0.03);
+}
+
+.tab-btn span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #536471;
+}
+
+.tab-btn.active span {
+  font-weight: 700;
+  color: #0f1419;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 56px; /* Lebar garis biru disesuaikan agar pas di bawah teks */
+  background-color: #1d9bf0;
+  border-radius: 9999px;
+}
+
+.notifications-content {
+  max-width: 400px;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.empty-title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.25rem;
+  margin: 0 0 0.5rem 0;
+  color: #0f1419;
+  letter-spacing: -0.02em;
+}
+
+.empty-description {
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+  color: #536471;
+  margin: 0;
+}

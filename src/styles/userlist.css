@@ -1,0 +1,25 @@
+.user-list-container {
+  background-color: #ffffff;
+}
+
+.timeline-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eff3f4;
+  z-index: 10;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.no-tweets {
+  padding: 2rem;
+  text-align: center;
+  color: #536471;
+}

@@ -1,0 +1,113 @@
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+/* Wrapper utama kolom pencarian */
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  /* Mengubah background menjadi putih bersih */
+  background-color: #ffffff; 
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  gap: 0.75rem;
+  /* Menambahkan border default berwarna abu-abu */
+  border: 1px solid #cfd9de; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Kondisi ketika komponen searchbar diklik (Fokus) */
+.search-bar-wrapper:focus-within {
+  background-color: #ffffff; /* Latar belakang tetap putih */
+  border: 1px solid #1d9bf0; /* Border berubah menjadi biru khas X */
+  box-shadow: rgba(29, 155, 240, 0.1) 0px 0px 0px 3px; /* Efek glow tipis di sekitar border */
+}
+
+.search-icon {
+  color: #536471;
+  font-size: 1.1rem;
+}
+
+/* Input teks di dalam wrapper */
+.search-input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  color: #0f1419;
+}
+
+/* Dropdown Menu */
+.search-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px;
+  z-index: 200;
+  overflow: hidden;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.dropdown-header {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f1419;
+  border-bottom: 1px solid #eff3f4;
+}
+
+/* Item User di Dropdown */
+.search-user-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-user-item:hover {
+  background-color: rgba(15, 20, 25, 0.03);
+}
+
+.search-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1d9bf0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.search-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-user-name {
+  font-weight: 700;
+  color: #0f1419;
+  font-size: 0.95rem;
+}
+
+.search-user-name:hover {
+  text-decoration: underline;
+}
+
+.search-user-username {
+  color: #536471;
+  font-size: 0.9rem;
+}
