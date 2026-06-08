@@ -6,12 +6,10 @@ function Notif() {
 
   return (
     <div className="notifications-container">
-      {/* Title Header */}
       <div className="notifications-header">
         <h2>Notifications</h2>
       </div>
 
-      {/* Tabs Sub-navigation */}
       <div className="notifications-tabs">
         <button 
           className={`tab-btn ${activeTab === 'All' ? 'active' : ''}`}

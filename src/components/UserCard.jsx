@@ -9,7 +9,6 @@ function UserCard({ user }) {
   
   const isFollowing = followingList.includes(user.id);
 
-  // State angka interaksi
   const [repostCount, setRepostCount] = useState(() => Math.floor(Math.random() * 100) + 1);
   const [likeCount, setLikeCount] = useState(() => Math.floor(Math.random() * 100) + 1);
   const [viewCount] = useState(() => Math.floor(Math.random() * 900) + 100); 
@@ -17,7 +16,6 @@ function UserCard({ user }) {
   const [isReposted, setIsReposted] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   
-  // State untuk mengontrol tampilan pop-up modal Views
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleRepost = (e) => {
@@ -44,7 +42,6 @@ function UserCard({ user }) {
 
   return (
     <div className="tweet-card" onClick={() => viewProfile(user)} style={{ cursor: 'pointer' }}>
-      {/* Avatar User */}
       <div className="tweet-avatar">
         {user.name.charAt(0)}
       </div>
@@ -90,28 +87,23 @@ function UserCard({ user }) {
         </div>
       </div>
 
-      {/* STRUKTUR POP-UP MODAL VIEWS */}
       {isModalOpen && (
         <div className="views-modal-overlay" onClick={closeViewsModal}>
           <div className="views-modal-content" onClick={(e) => e.stopPropagation()}>
             
-            {/* Tombol Silang (Close) */}
             <button className="views-modal-close-btn" onClick={closeViewsModal}>
               ✕
             </button>
             
-            {/* Isi Konten Utama Modal */}
             <div className="views-modal-body">
               <h2 className="views-modal-title">Views</h2>
               <p className="views-modal-description">
                 Times this post was seen. To learn more, visit the{' '}
-                {/* Menambahkan event onClick untuk menutup modal secara otomatis */}
                 <span className="views-link" onClick={closeViewsModal}>
                   Help Center
                 </span>.
               </p>
               
-              {/* Tombol Dismiss */}
               <button className="views-modal-dismiss-btn" onClick={closeViewsModal}>
                 Dismiss
               </button>

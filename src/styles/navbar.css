@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-/* Container logo X dengan efek lingkaran hover di latar belakangnya */
 .nav-logo {
   display: inline-flex;
   align-items: center;
@@ -22,12 +21,10 @@
   transition: background-color 0.2s ease;
 }
 
-/* Efek hover lingkaran samar saat logo X didekati mouse */
 .nav-logo:hover {
   background-color: rgba(15, 20, 25, 0.1);
 }
 
-/* Styling huruf X */
 .logo-text {
   font-size: 2rem;
   font-weight: 900;

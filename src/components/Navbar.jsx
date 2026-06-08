@@ -11,15 +11,13 @@ function Navbar() {
 
   return (
     <div className="sidebar-navbar">
-      {/* Logo X berupa teks huruf X yang bisa diklik */}
       <div className="nav-logo" onClick={() => {
-        setSelectedUser(null); // Reset target data user lain
-        setActivePage('beranda'); // Pindah ke halaman beranda
+        setSelectedUser(null);
+        setActivePage('beranda');
       }}>
         <span className="logo-text">X</span>
       </div>
 
-      {/* Item-Item Menu Navigasi */}
       <nav className="nav-menu-items">
         <button 
           className={`nav-item-btn ${activePage === 'beranda' ? 'active' : ''}`}

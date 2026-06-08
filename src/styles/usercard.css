@@ -129,7 +129,6 @@
   user-select: none;
 }
 
-/* Gaya untuk latar belakang gelap transparan di belakang pop-up */
 .views-modal-overlay {
   position: fixed;
   top: 0;
@@ -143,7 +142,6 @@
   z-index: 999;
 }
 
-/* Kotak putih utama modal */
 .views-modal-content {
   background-color: #ffffff;
   width: 100%;
@@ -155,7 +153,6 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 28px;
 }
 
-/* Tombol silang di sudut kiri atas kotak */
 .views-modal-close-btn {
   position: absolute;
   top: 1rem;
@@ -178,7 +175,6 @@
   background-color: rgba(15, 20, 25, 0.1);
 }
 
-/* Penataan text didalam badan modal */
 .views-modal-body {
   padding-top: 2.5rem;
   padding-left: 1.5rem;
@@ -207,7 +203,6 @@
   font-weight: 500;
 }
 
-/* Tombol hitam pekat Dismiss di bagian bawah */
 .views-modal-dismiss-btn {
   width: 100%;
   background-color: #0f1419;

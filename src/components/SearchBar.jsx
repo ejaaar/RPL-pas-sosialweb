@@ -25,18 +25,15 @@ function SearchBar() {
 
   return (
     <div className="search-container" ref={searchContainerRef}>
-      {/* Kolom Input Pencarian */}
       <div className="search-bar-wrapper">
-          {/* <span className="search-icon"></span> */}
         <input 
           type="text" 
           placeholder="Cari" 
           className="search-input"
-          onFocus={() => setIsOpen(true)} // Tampilkan daftar akun saat input diklik
+          onFocus={() => setIsOpen(true)}
         />
       </div>
 
-      {/* Dropdown Daftar Semua Akun */}
       {isOpen && users && users.length > 0 && (
         <div className="search-dropdown">
           <div className="dropdown-header">Rekomendasi Akun</div>
@@ -46,15 +43,13 @@ function SearchBar() {
                 key={user.id} 
                 className="search-user-item"
                 onClick={() => {
-                  viewProfile(user); // Masuk ke halaman profil akun yang diklik
-                  setIsOpen(false); // Tutup dropdown setelah diklik
+                  viewProfile(user);
+                  setIsOpen(false); 
                 }}
               >
-                {/* Avatar Akun */}
                 <div className="search-user-avatar">
                   {user.name.charAt(0).toUpperCase()}
                 </div>
-                {/* Info Akun */}
                 <div className="search-user-info">
                   <div className="search-user-name">{user.name}</div>
                   <div className="search-user-username">@{user.username}</div>

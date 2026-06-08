@@ -52,7 +52,7 @@
   position: absolute;
   bottom: 0;
   height: 4px;
-  width: 56px; /* Lebar garis biru disesuaikan agar pas di bawah teks */
+  width: 56px; 
   background-color: #1d9bf0;
   border-radius: 9999px;
 }

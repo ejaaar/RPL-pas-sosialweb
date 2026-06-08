@@ -7,8 +7,6 @@ function UserProfile() {
   const { selectedUser, setActivePage } = useContext(ThemeContext);
   const [activeTab, setActiveTab] = useState('Posts');
 
-  // Jika selectedUser kosong, tampilkan data profil Anda (pipit)
-  // Jika ada selectedUser, tampilkan data orang tersebut
   const user = selectedUser || {
     name: 'pipit',
     username: 'pipitm4p',
@@ -21,7 +19,6 @@ function UserProfile() {
   return (
     <div className="profile-page" style={{ backgroundColor: '#fff', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       
-      {/* Header dengan Tombol Back */}
       <div style={{ display: 'flex', alignItems: 'center', padding: '0.5rem 1rem', gap: '2rem', backgroundColor: '#fff', zIndex: 10 }}>
         <button 
           onClick={() => setActivePage('beranda')}
@@ -35,12 +32,9 @@ function UserProfile() {
         </div>
       </div>
 
-      {/* Banner Gray */}
       <div style={{ height: '200px', backgroundColor: '#cfd9de' }}></div>
 
-      {/* Info Profile Area */}
       <div style={{ padding: '0 1rem', position: 'relative', marginBottom: '1rem' }}>
-        {/* Avatar Besar */}
         <div style={{
           width: '130px', height: '130px', borderRadius: '50%', 
           backgroundColor: isOwnProfile ? '#5c768d' : '#1d9bf0',
@@ -86,7 +80,6 @@ function UserProfile() {
         </div>
       </div>
 
-      {/* Tabs Menu */}
       <div style={{ display: 'flex', borderBottom: '1px solid #eff3f4' }}>
         {['Posts', 'Replies', 'Media', 'Likes'].map((tab) => (
           <button 
@@ -104,7 +97,6 @@ function UserProfile() {
         ))}
       </div>
 
-      {/* Konten Kosong di Tengah Bawah halaman */}
       <div style={{ 
         flex: 1, 
         display: 'flex', 

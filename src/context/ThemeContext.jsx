@@ -6,7 +6,6 @@ export function ThemeProvider({ children }) {
   const [activePage, setActivePage] = useState('beranda');
   const [selectedUser, setSelectedUser] = useState(null);
 
-  // Fungsi untuk berpindah ke profil user tertentu
   const viewProfile = (user) => {
     setSelectedUser(user);
     setActivePage('profil');
