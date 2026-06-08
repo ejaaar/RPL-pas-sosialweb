@@ -65,7 +65,7 @@ function UserCard({ user }) {
         </div>
 
         <p className="tweet-text">
-          Halo dunia! Silakan hubungi saya melalui jalur email bisnis di bawah ini.
+          Halo dunia!
         </p>
 
         <div className="tweet-actions">
